@@ -64,4 +64,7 @@
   <ItemGroup>
     <Build Include="Tables\Users.sql" />
   </ItemGroup>
+  <ItemGroup>
+    <RefactorLog Include="TestMusicAppDb.refactorlog" />
+  </ItemGroup>
 </Project>
