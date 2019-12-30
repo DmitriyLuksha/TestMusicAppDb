@@ -1,5 +1,5 @@
 pool:
-  vmImage: vs2017-win2016
+  vmImage: 'vs2017-win2016'
 
 steps:
   - task: VSBuild@1
@@ -11,7 +11,7 @@ steps:
   - task: CopyFiles@2
     displayName: 'Copy files'
     inputs:
-      SourceFolder: '$(agent.builddirectory)/bin/$(BuildConfiguration)'
+      SourceFolder: '$(agent.builddirectory)/s/bin/$(BuildConfiguration)'
       Contents: 'TestMusicAppDb.dacpac'
       TargetFolder: '$(build.artifactstagingdirectory)'
 
