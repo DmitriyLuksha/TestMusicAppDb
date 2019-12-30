@@ -11,9 +11,9 @@ steps:
   - task: CopyFiles@2
     displayName: 'Copy files'
     inputs:
-      SourceFolder: '$(agent.builddirectory)/s/bin/$(BuildConfiguration)'
+      SourceFolder: '$(Build.SourcesDirectory)/bin/$(BuildConfiguration)'
       Contents: 'TestMusicAppDb.dacpac'
-      TargetFolder: '$(build.artifactstagingdirectory)'
+      TargetFolder: '$(Build.ArtifactStagingDirectory)'
 
   - task: PublishBuildArtifacts@1
     displayName: 'Publish'
