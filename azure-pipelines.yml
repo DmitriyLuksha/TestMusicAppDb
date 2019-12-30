@@ -1,17 +1,22 @@
 pool:
   vmImage: vs2017-win2016
+
 steps:
   - task: VSBuild@1
+    displayName: 'Build solution'
     inputs:
       solution: '**\*.sln'
+      configuration: '$(BuildConfiguration)'
 
   - task: CopyFiles@2
+    displayName: 'Copy files'
     inputs:
-      SourceFolder: '$(agent.builddirectory)'
-      Contents: '**'
+      SourceFolder: '$(agent.builddirectory)/bin/$(BuildConfiguration)'
+      Contents: 'TestMusicAppDb.dacpac'
       TargetFolder: '$(build.artifactstagingdirectory)'
 
   - task: PublishBuildArtifacts@1
+    displayName: 'Publish'
     inputs:
       PathtoPublish: '$(Build.ArtifactStagingDirectory)'
       ArtifactName: 'drop'
