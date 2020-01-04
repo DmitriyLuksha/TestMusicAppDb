@@ -14,4 +14,11 @@
     <Property Name="ParentElementType" Value="SqlTable" />
     <Property Name="NewName" Value="Email" />
   </Operation>
+  <Operation Name="Rename Refactor" Key="bf4b0be2-410a-4c93-89f7-aad90af5f6b9" ChangeDateTime="01/04/2020 10:29:50">
+    <Property Name="ElementName" Value="[dbo].[Tracks].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Tracks]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="ClusteredId" />
+  </Operation>
 </Operations>
