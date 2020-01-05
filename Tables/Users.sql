@@ -7,7 +7,6 @@
     [Password] VARCHAR(40) NULL, 
     CONSTRAINT [UN_Users_Username] UNIQUE(Username),
     CONSTRAINT [UN_Users_Email] UNIQUE(Email)
-
 )
 
 GO
