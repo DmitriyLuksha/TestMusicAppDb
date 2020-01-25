@@ -1,0 +1,3 @@
+1) Open SQL Server properties, security tab and ensure that Server Authentication set to SQL Server and Windows Authentication mode
+2) Create Database and new user
+3) Update server environment variables with new connection string with user crids
